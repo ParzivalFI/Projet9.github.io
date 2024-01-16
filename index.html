@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,7 @@
 		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
 		rel="stylesheet">
 	<meta charset="UTF-8">
-	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./assets/maugallery.js"></script>
@@ -27,24 +27,29 @@
 
 	<!-- twitter -->
 	<meta name="twitter:card" content="image" />
-	<meta name="twitter:site" content="@monCompteTwitter" />
+	<meta name="twitter:site" content="@ninacarducci" />
 	<meta name="twitter:title" content="Nina" />
 	<meta name="twitter:description" content="Découvrez le site de Nina" />
 	<meta name="twitter:image" content="./assets/images/nina.webp" />
+	<meta name="twitter:url" content="https://parzivalfi.github.io/Projet9.github.io/" />
+	
+	<meta
+	name="description"
+	content="Web de ninacarducci"
+  />
 
-
-
+<title>Nina</title>
 
 
 </head>
-<title>Nina</title>
+
 
 <body>
 
 	<script type="application/ld+json">
 		{
-		  "@context": "https://parzivalfi.github.io/Projet9.github.io/",
-		  "@type": "photographe",
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
 		  "address": {
 			"@type": "PostalAddress",
 			"addressLocality": "Paris",
@@ -52,21 +57,14 @@
 			"postalCode": "75000",
 			"streetAddress": "Avenue des Champs-Élysées"
 		  },
-		  "aggregateRating": {
-			"@type": "AggregateRating",
-			"ratingValue": "4",
-			"reviewCount": "250"
-		  },
-		  "name": "GreatFood",
-		  "openingHours": [
-			"Lundi au vendredi 10:00-17:30",
-			"samedi 15:00-18:30",
-		  ],
-		  <!-- "priceRange": "$$",
-		  "servesCuisine": [
-			"Middle Eastern",
-			"Mediterranean" -->
-		  ],
+		  "name": "Nina",
+		  "image": "./assets/images/nina.webp"
+		  "openingHoursSpecification": [{
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+			"opens": "10:00",
+			"closes": "19:00"
+			}],
 		  "telephone": "0101010101",
 		  "url": "https://parzivalfi.github.io/Projet9.github.io/"
 		}
@@ -82,7 +80,7 @@
 				<li><a href="#gallery">Galerie</a></li>
 				<li><a href="#services">Service</a></li>
 				<li><a href="#contact">Contact</a></li>
-				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
+				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" aria-label="instagram"
 						target="_blank"><img src="assets/images/instagram.webp" alt=""></a></li>
 			</ul>
 		</div>
@@ -168,10 +166,10 @@
 		<div class="quote">
 			<figure>
 				<blockquote>
-					<h1 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un
+					<h3 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un
 						fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude
 						n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.
-					</h1>
+					</h3>
 				</blockquote>
 				<figcaption class="quote__author">- Richard Avedon</figcaption>
 			</figure>
@@ -231,11 +229,11 @@
 				<h2>Une question ? Une demande de devis ?</h2>
 				<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
 				<form action="" method="post">
-					<p>Nom</p>
-					<input type="text" name="nom" id="nom">
-					<p>Email</p>
+					<label for="nom">Nom </label>
+					<input  type="text" name="nom" id="nom">
+					<label for="email">Email</label>
 					<input type="email" name="email" id="email">
-					<p>Message</p>
+					<label for="message">Message</label>
 					<textarea name="message" id="message" cols="30" rows="10"></textarea>
 					<input type="submit" value="Envoyer" />
 				</form>
