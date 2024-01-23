@@ -28,6 +28,7 @@
             tagsCollection.push(theTag);
           }
         });
+        
 
       if (options.showTags) {
         $.fn.mauGallery.methods.showItemTags(
